@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.SecondExController">
+    <children>
+        <Label layoutX="319.0" layoutY="43.0" prefHeight="30.0" prefWidth="206.0" text="Console Expert">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Pane layoutX="57.0" layoutY="82.0" prefHeight="406.0" prefWidth="317.0">
+            <children>
+                <GridPane layoutX="40.0" layoutY="54.0" prefHeight="276.0" prefWidth="278.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="153.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="125.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label layoutX="10.0" layoutY="84.0" prefHeight="19.0" prefWidth="193.0" text="type d'utilisation" />
+                        <Label prefHeight="19.0" prefWidth="201.0" text="stockage de console" GridPane.rowIndex="2" />
+                        <Label layoutX="10.0" layoutY="35.0" prefHeight="19.0" prefWidth="248.0" text="qualité de jeu" GridPane.rowIndex="3" />
+                        <Label layoutX="10.0" layoutY="35.0" prefHeight="19.0" prefWidth="204.0" text="nombre de parties" GridPane.rowIndex="4" />
+                        <Label layoutX="10.0" layoutY="173.0" prefHeight="19.0" prefWidth="173.0" text="prix de console" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="typeCombo" prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox fx:id="storageCombo" layoutX="212.0" layoutY="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="qualityCombo" layoutX="212.0" layoutY="80.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="nbpCombo" layoutX="212.0" layoutY="135.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="priceCombo" layoutX="212.0" layoutY="190.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="screenCombo" layoutX="163.0" layoutY="204.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label prefHeight="19.0" prefWidth="173.0" text="nécessité d'écran" GridPane.rowIndex="6" />
+                  <Label prefHeight="19.0" prefWidth="201.0" text="La taille de console" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="sizeCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+                <Button layoutX="226.0" layoutY="352.0" mnemonicParsing="false" onAction="#onClickValider" text="Valider" />
+                <Label alignment="CENTER" layoutX="77.0" layoutY="30.0" prefHeight="21.0" prefWidth="161.0" text="A propos du console">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <RadioButton layoutX="38.0" layoutY="356.0" mnemonicParsing="false" selected="true" text="Chainage avant" />
+            </children>
+        </Pane>
+      <Pane layoutX="470.0" layoutY="115.0" prefHeight="154.0" prefWidth="267.0">
+         <children>
+            <TextArea fx:id="txtAreaBF" editable="false" layoutX="14.0" prefHeight="149.0" prefWidth="246.0" style="-fx-focus-color: -fx-control-inner-background ; -fx-faint-focus-color: -fx-control-inner-background ;" />
+         </children>
+      </Pane>
+      <Pane layoutX="443.0" layoutY="268.0" prefHeight="242.0" prefWidth="317.0">
+         <children>
+            <Label layoutX="123.0" layoutY="168.0" text="Résultat Finale" />
+            <TextArea fx:id="txtAreaRule" editable="false" layoutX="4.0" layoutY="-2.0" prefHeight="166.0" prefWidth="317.0" style="-fx-focus-color: -fx-control-inner-background ; -fx-faint-focus-color: -fx-control-inner-background ;" />
+            <TextArea fx:id="txtAreaResult" editable="false" layoutX="41.0" layoutY="187.0" prefHeight="41.0" prefWidth="246.0" style="-fx-focus-color: -fx-control-inner-background ; -fx-faint-focus-color: -fx-control-inner-background ;" />
+         </children>
+      </Pane>
+      <Button layoutX="507.0" layoutY="48.0" mnemonicParsing="false" onAction="#basculerEX" text="VehicleExpert" />
+    </children>
+</Pane>
